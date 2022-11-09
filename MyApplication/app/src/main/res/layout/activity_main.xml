@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_main_scene"
+        tools:context=".MainActivity">
+
+        <RadioGroup
+            android:id="@+id/radiosexo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/radioEscolaridade"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp">
+
+            <RadioButton
+                android:id="@+id/masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="28dp"
+                android:text="Masculino"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/feminino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="28dp"
+                android:text="Feminino"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioEscolaridade"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="332dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.246"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="28dp"
+                android:text="Fundamental"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="28dp"
+                android:text="Medio"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/superior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="28dp"
+                android:text="Superior"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="enviar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.301"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputAltura" />
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/inputAltura"
+            android:layout_width="300dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="20dp"
+            android:hint="Altura"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.209"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPeso"
+            app:mask="_.__"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPeso"
+            android:layout_width="300dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="36dp"
+            android:hint="peso"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.209"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiosexo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Escolaridade"
+            android:textColor="#050505"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioEscolaridade"
+            tools:layout_editor_absoluteX="54dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Sexo"
+            android:textColor="#020202"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/radiosexo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
