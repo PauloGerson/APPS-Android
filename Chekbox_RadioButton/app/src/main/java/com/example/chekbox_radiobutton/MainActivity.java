@@ -40,31 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         radioGroup = findViewById(R.id.radioGroup);
 
-        /*Checkbox*/
-        /*rock = findViewById(R.id.rock);
-        sertanejo = findViewById(R.id.sertanejo);
-        pagode = findViewById(R.id.forro);
-        forro = findViewById(R.id.forro);
-        outros = findViewById(R.id.outros);*/
+       
 
 
     }
 
-    public void checkbox(){
-        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-
-
-
-
-        /*switch (view.getId()){
-            case R.id.checkrock:
-                if(checked)
-                   Toast.makeText(getActivity(), "olá", Toast.LENGTH_SHORT);
-                break;
-        }*/
-
-
-    }
 
 
 
@@ -112,18 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
                 intent.putExtra("nome", valorNome.getText().toString());
                 intent.putExtra("idade", valorIdade.getText().toString());
                 intent.putExtra("sexo", radioSelecionado.getText().toString());
 
-
-
-               /* intent.putExtra("sertanejo", sertanejo.getText().toString());
-                intent.putExtra("pagode", pagode.getText().toString());
-                intent.putExtra("forro", forro.getText().toString());
-                intent.putExtra("outros", outros.getText().toString());
-*/
 
 
 
